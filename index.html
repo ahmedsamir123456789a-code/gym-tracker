@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> خطة الجيم بتاعتي</title>
+<title>خطة الجيم بتاعتي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -149,6 +149,17 @@
     font-weight:700;
   }
   .music-btn .micon{font-size:24px;}
+  .music-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:16px;
+  }
+  .music-grid .music-btn{
+    padding:26px 10px;
+    font-size:14px;
+  }
+  .music-grid .micon{font-size:32px;}
   .quick-card{
     background:var(--card);
     border:1px solid var(--card-border);
@@ -433,6 +444,7 @@
   <button class="nav-btn" data-section="exercises"><span class="nicon">🏋️</span>التمارين</button>
   <button class="nav-btn" data-section="food"><span class="nicon">🍽️</span>الأكل</button>
   <button class="nav-btn" data-section="weight"><span class="nicon">⚖️</span>الوزن</button>
+  <button class="nav-btn" data-section="music"><span class="nicon">🎵</span>الموسيقى</button>
 </nav>
 
 <script>
@@ -463,16 +475,17 @@ const NUTRITION_MEALS = [
   {time:'سناك بعد التمرين', items:'علبة تونة + رغيف عيش + زبادي', note:'التونة من أرخص مصادر البروتين عالي الجودة.', carbs:30},
   {time:'العشا', items:'فول أو جبن قريش + بيضة + عيش بلدي', note:'', carbs:25},
   {time:'قبل النوم', items:'كوب لبن + معلقة زبدة فول سوداني', note:'سعرات بسيطة إضافية وانت نايم.', carbs:5},
+  {time:'شوفان وفاكهة', items:'نص كوب شوفان بالحليب + فاكهة موسمية (موزة أو تفاحة أو برتقالة)', note:'مصدر كارب وألياف ممتاز، تقدر تاكله بدل الفطار العادي أي يوم للتنويع.', carbs:45},
   {time:'شيك بديل الماس جينر (اختياري)', items:'كوب لبن + 3 معالق شوفان + معلقتين زبدة فول سوداني + موزة + عسل', note:'حوالي 700-800 سعر حراري، أرخص بكتير من علبة الماس جينر الجاهزة.', carbs:70, special:true},
 ];
 const BASE_CARBS = NUTRITION_MEALS.reduce((s,m)=>s+m.carbs,0);
 
 const LUNCH_ROTATION = [
-  {weekday:0, day:'الأحد', tag:'🍗 فراخ', items:'فراخ مشوية بالليمون والثوم + أرز + سلطة', note:'اسلق أو اشوي صدر الفراخ متتبل بليمون وثوم وكمون — رخيص وبروتين عالي.', carbs:90},
+  {weekday:0, day:'الأحد', tag:'🍗 فراخ', items:'فراخ مشوية بالليمون والثوم + أرز بسمتي + سلطة', note:'اسلق أو اشوي صدر الفراخ متتبل بليمون وثوم وكمون — رخيص وبروتين عالي.', carbs:90},
   {weekday:1, day:'الاتنين', tag:'🌱 اقتصادي', items:'عدس أصفر + أرز + خضار', note:'العدس من أرخص مصادر البروتين والألياف في مصر.', carbs:90},
   {weekday:2, day:'الثلاثاء', tag:'🥩 لحمة', items:'لحمة مفرومة بالبصل والفلفل + بطاطس في الفرن', note:'اللحمة المفرومة أرخص من الشرائح وبتديك نفس البروتين تقريبًا.', carbs:70},
   {weekday:3, day:'الأربع', tag:'🌱 اقتصادي', items:'تونة بالمكرونة', note:'وجبة سريعة واقتصادية وعالية البروتين.', carbs:90},
-  {weekday:4, day:'الخميس', tag:'🍗 فراخ', items:'فراخ بانيه في الفرن + أرز', note:'مبنّية في الفرن مش مقلية عشان توفر زيت وتبقى أخف.', carbs:90},
+  {weekday:4, day:'الخميس', tag:'🍗 فراخ', items:'شاورما فراخ بيتي متبّلة + أرز بسمتي + سلطة', note:'قطع فراخ متبّلة بالتوم والليمون والبهارات ومشوية في الفرن أو على طاسة — نفس طعم الشاورما وأرخص وأصح من الجاهزة.', carbs:90},
   {weekday:5, day:'الجمعة', tag:'🌱 اقتصادي', items:'فول بالزيت والطماطم + بيضة + عيش بلدي', note:'', carbs:60},
   {weekday:6, day:'السبت', tag:'🥩 لحمة', items:'كبدة بالبصل والفلفل + عيش بلدي', note:'الكبدة رخيصة وغنية بالحديد ومفيدة جدًا لبناء العضل.', carbs:55},
 ];
@@ -521,11 +534,11 @@ let currentSection = 'home';
 let currentDay = 'd1';
 let stateCache = {};
 
-async function loadState(key, fallback){
+function loadState(key, fallback){
   if(stateCache[key] !== undefined) return stateCache[key];
   try{
-    const res = await window.storage.get(key, false);
-    const val = res ? JSON.parse(res.value) : fallback;
+    const raw = localStorage.getItem(key);
+    const val = raw ? JSON.parse(raw) : fallback;
     stateCache[key] = val;
     return val;
   }catch(e){
@@ -533,9 +546,9 @@ async function loadState(key, fallback){
     return fallback;
   }
 }
-async function saveState(key, val){
+function saveState(key, val){
   stateCache[key] = val;
-  try{ await window.storage.set(key, JSON.stringify(val), false); }catch(e){ console.error(e); }
+  try{ localStorage.setItem(key, JSON.stringify(val)); }catch(e){ console.error(e); }
 }
 
 function setActiveNav(){
@@ -562,7 +575,8 @@ const HEADER_SUBS = {
   home: 'شوف حالتك النهاردة بنظرة واحدة',
   exercises: 'اختار اليوم وابدأ التمرين',
   food: 'الأكل + الكرياتين + توزيع الكارب',
-  weight: 'سجّل وزنك كل أسبوع وتابع التقدم'
+  weight: 'سجّل وزنك كل أسبوع وتابع التقدم',
+  music: 'شغّل موسيقاك من التطبيق اللي إنت عايزه'
 };
 
 async function renderHome(){
@@ -839,6 +853,20 @@ async function renderWeight(){
   });
 }
 
+function renderMusic(){
+  document.getElementById('headerSub').textContent = HEADER_SUBS.music;
+  const wrap = document.getElementById('mainContent');
+  wrap.innerHTML = `
+    <div class="section-title"><b>شغّل موسيقاك وانت بتتمرن</b></div>
+    <div class="music-grid">
+      <a class="music-btn" href="https://music.youtube.com" target="_blank" rel="noopener"><span class="micon">▶️</span>يوتيوب ميوزيك</a>
+      <a class="music-btn" href="https://www.youtube.com" target="_blank" rel="noopener"><span class="micon">📺</span>يوتيوب</a>
+      <a class="music-btn" href="https://open.spotify.com" target="_blank" rel="noopener"><span class="micon">🎧</span>سبوتيفاي</a>
+      <a class="music-btn" href="https://play.anghami.com" target="_blank" rel="noopener"><span class="micon">🎶</span>أنغامي</a>
+    </div>
+  `;
+}
+
 function switchSection(section){
   currentSection = section;
   setActiveNav();
@@ -847,6 +875,7 @@ function switchSection(section){
   else if(section==='exercises') renderExercises();
   else if(section==='food') renderFood();
   else if(section==='weight') renderWeight();
+  else if(section==='music') renderMusic();
 }
 
 document.querySelectorAll('.nav-btn').forEach(btn=>{
