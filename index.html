@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خطة الجيم بتاعتي</title>
+<title>رحلتي — الجيم والتعافي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700;800&family=Lalezar&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0D0A14;
-    --card:#181420;
-    --card-border:#2C2438;
-    --accent:#FF7A45;
-    --accent-glow:rgba(255,122,69,.28);
-    --accent2:#7C5CFF;
-    --text:#F8F5FA;
-    --text-dim:#9C93AA;
+    --bg:#000000;
+    --card:#111111;
+    --card-border:#2E2E2E;
+    --accent:#FFFFFF;
+    --accent-glow:rgba(255,255,255,.20);
+    --accent2:#8A8A8A;
+    --text:#FFFFFF;
+    --text-dim:#9A9A9A;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
     background:
-      radial-gradient(circle at 15% 0%, rgba(255,122,69,.12), transparent 40%),
-      radial-gradient(circle at 90% 10%, rgba(124,92,255,.10), transparent 35%),
+      radial-gradient(circle at 15% 0%, rgba(255,255,255,.07), transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(255,255,255,.04), transparent 35%),
       var(--bg);
     color:var(--text);
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     min-height:100vh;
     padding-bottom:90px;
   }
@@ -44,20 +44,34 @@
     gap:8px;
     margin-bottom:2px;
   }
+  .lang-btn{
+    background:none;
+    border:1px solid var(--card-border);
+    color:var(--text-dim);
+    font-family:'Changa',sans-serif;
+    font-size:12px;
+    font-weight:700;
+    padding:6px 12px;
+    border-radius:999px;
+    cursor:pointer;
+  }
   .brand-dot{
     width:10px;height:10px;border-radius:50%;
     background:var(--accent);
     box-shadow:0 0 12px var(--accent-glow);
   }
   h1{
-    font-size:21px;
-    font-weight:900;
+    font-family:'Lalezar',sans-serif;
+    font-size:26px;
+    font-weight:400;
+    letter-spacing:.5px;
     margin:0;
-    background:linear-gradient(90deg,#fff,#B9C0CC);
+    background:linear-gradient(90deg,#FFFFFF,#8A8A8A);
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
   }
+
   .subtitle{
     color:var(--text-dim);
     font-size:12.5px;
@@ -78,7 +92,7 @@
     background:var(--card);
     border:1px solid var(--card-border);
     color:var(--text-dim);
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-size:13.5px;
     font-weight:700;
     cursor:pointer;
@@ -100,7 +114,7 @@
   }
   .section-title b{color:var(--text);font-weight:800;}
   .hero-card{
-    background:linear-gradient(135deg,#2A1710,#181420 60%);
+    background:linear-gradient(135deg,#1A1A1A,#111111 60%);
     border:1px solid var(--accent-glow);
     border-radius:18px;
     padding:18px;
@@ -119,7 +133,7 @@
     filter:blur(10px);
   }
   .hero-label{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.3px;}
-  .hero-value{font-size:22px;font-weight:900;margin:4px 0 2px 0;}
+  .hero-value{font-family:'Lalezar',sans-serif;font-size:24px;font-weight:400;letter-spacing:.3px;margin:4px 0 2px 0;}
   .hero-sub{font-size:12.5px;color:var(--text-dim);}
   .quick-grid{
     display:grid;
@@ -144,7 +158,7 @@
     padding:14px 8px;
     text-decoration:none;
     color:var(--text);
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-size:12px;
     font-weight:700;
   }
@@ -155,10 +169,7 @@
     gap:12px;
     margin-bottom:16px;
   }
-  .music-grid .music-btn{
-    padding:26px 10px;
-    font-size:14px;
-  }
+  .music-grid .music-btn{padding:26px 10px;font-size:14px;}
   .music-grid .micon{font-size:32px;}
   .quick-card{
     background:var(--card);
@@ -175,7 +186,7 @@
     text-align:center;
     background:var(--accent);
     color:#0A0B0E;
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-weight:800;
     font-size:14px;
     border:none;
@@ -203,7 +214,7 @@
   }
   .progress-fill{
     height:100%;
-    background:linear-gradient(90deg,var(--accent),#FFC48A);
+    background:linear-gradient(90deg,var(--accent),#CFCFCF);
     border-radius:99px;
     transition:width .25s ease;
     width:0%;
@@ -259,6 +270,12 @@
     margin-bottom:12px;
     display:block;
   }
+  .yt-wrap{position:relative;width:100%;max-width:260px;margin:0 auto 12px auto;padding-top:177.78%;border-radius:12px;overflow:hidden;background:#000;}
+  .yt-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  .yt-wrap-h{position:relative;width:100%;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;margin-bottom:12px;}
+  .yt-wrap-h iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  .alt-label{font-size:12.5px;color:var(--text-dim);margin:4px 0 8px 0;}
+  .alt-label b{color:var(--accent);}
   .card-bottom{
     display:flex;
     align-items:center;
@@ -275,7 +292,7 @@
     border-radius:8px;
   }
   .carbs-badge{
-    background:rgba(212,255,62,.1);
+    background:rgba(255,255,255,.12);
     color:var(--accent);
     font-size:12px;
     font-weight:800;
@@ -292,7 +309,7 @@
     background:#1C2027;
     border:1px solid var(--card-border);
     color:var(--text);
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-size:13px;
     padding:6px 8px;
     border-radius:8px;
@@ -303,7 +320,7 @@
     border:1px solid var(--card-border);
     background:#1C2027;
     color:var(--text-dim);
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-size:13px;
     font-weight:800;
     padding:8px 16px;
@@ -325,14 +342,14 @@
     background:none;
     border:none;
     color:#5A606B;
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-size:12px;
     text-decoration:underline;
     cursor:pointer;
   }
   .tip-box{
-    background:linear-gradient(135deg,#241A12,#181420);
-    border:1px solid #5A3A20;
+    background:linear-gradient(135deg,#161616,#111111);
+    border:1px solid #333333;
     border-radius:12px;
     padding:12px 14px;
     font-size:12.5px;
@@ -352,7 +369,7 @@
     background:var(--card);
     border:1px solid var(--card-border);
     color:var(--text);
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-size:14px;
     padding:12px;
     border-radius:12px;
@@ -361,7 +378,7 @@
     background:var(--accent);
     color:#0A0B0E;
     border:none;
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-weight:800;
     font-size:14px;
     padding:0 20px;
@@ -387,19 +404,10 @@
     font-size:13.5px;
   }
   .log-date{color:var(--text-dim);font-size:12px;}
-  .log-actions{display:flex;align-items:center;gap:10px;}
-  .del-btn{
-    background:none;
-    border:none;
-    color:var(--text-dim);
-    font-size:17px;
-    cursor:pointer;
-    padding:4px 6px;
-  }
   .log-w{font-weight:800;font-size:15px;}
   .delta{font-size:12.5px;font-weight:800;padding:3px 9px;border-radius:99px;}
-  .delta.up{background:rgba(212,255,62,.12);color:var(--accent);}
-  .delta.down{background:rgba(255,91,110,.12);color:var(--accent2);}
+  .delta.up{background:rgba(255,255,255,.14);color:var(--accent);}
+  .delta.down{background:rgba(138,138,138,.16);color:var(--accent2);}
   .delta.same{background:#1C2027;color:var(--text-dim);}
   .empty-note{
     text-align:center;
@@ -423,7 +431,7 @@
     background:none;
     border:none;
     color:var(--text-dim);
-    font-family:'Cairo',sans-serif;
+    font-family:'Changa',sans-serif;
     font-size:11px;
     font-weight:700;
     display:flex;
@@ -441,7 +449,11 @@
 <body>
 
 <div id="topHeader">
-  <div class="brand"><div class="brand-dot"></div><h1>خطة الجيم بتاعتي</h1></div>
+  <div class="brand">
+    <div class="brand-dot"></div>
+    <h1 id="brandTitle">رحلتي</h1>
+    <button id="langBtn" class="lang-btn">EN</button>
+  </div>
   <p class="subtitle" id="headerSub">أول مرة في الجيم — 5 أيام في الأسبوع لبناء العضل</p>
   <div class="tabs" id="subTabs"></div>
 </div>
@@ -457,6 +469,35 @@
 </nav>
 
 <script>
+let LANG = localStorage.getItem('lang') || 'ar';
+
+function tr(ar, en){
+  return LANG === 'en' ? (en || ar) : ar;
+}
+
+function applyLangToDocument(){
+  document.documentElement.dir = LANG === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = LANG;
+  document.getElementById('langBtn').textContent = LANG === 'ar' ? 'EN' : 'AR';
+  document.getElementById('brandTitle').textContent = tr('رحلتي', 'My Journey');
+}
+
+const NAV_LABELS = {
+  home: {ar:'الرئيسية', en:'Home'},
+  exercises: {ar:'التمارين', en:'Workouts'},
+  food: {ar:'الأكل', en:'Food'},
+  weight: {ar:'الوزن', en:'Weight'},
+  music: {ar:'الموسيقى', en:'Music'},
+};
+
+function renderNavLabels(){
+  document.querySelectorAll('.nav-btn').forEach(btn=>{
+    const key = btn.dataset.section;
+    const icon = btn.querySelector('.nicon').outerHTML;
+    btn.innerHTML = icon + tr(NAV_LABELS[key].ar, NAV_LABELS[key].en);
+  });
+}
+
 const ICONS = {
   barbell: `<svg viewBox="0 0 48 48" fill="none" stroke-width="2.4" stroke-linecap="round"><line x1="8" y1="24" x2="40" y2="24"/><rect x="4" y="16" width="6" height="16" rx="1.5"/><rect x="38" y="16" width="6" height="16" rx="1.5"/><rect x="12" y="19" width="4" height="10" rx="1"/><rect x="32" y="19" width="4" height="10" rx="1"/></svg>`,
   dumbbell: `<svg viewBox="0 0 48 48" fill="none" stroke-width="2.4" stroke-linecap="round"><line x1="16" y1="24" x2="32" y2="24"/><rect x="8" y="17" width="8" height="14" rx="2"/><rect x="32" y="17" width="8" height="14" rx="2"/></svg>`,
@@ -471,11 +512,12 @@ const ICONS = {
 };
 
 const DAYS = [
-  {id:'d1', label:'صدر', full:'يوم 1 — الصدر', weekday:0},
-  {id:'d2', label:'ظهر', full:'يوم 2 — الظهر', weekday:1},
-  {id:'d3', label:'أرجل', full:'يوم 3 — الأرجل', weekday:2},
-  {id:'d4', label:'أكتاف', full:'يوم 4 — الأكتاف', weekday:3},
-  {id:'d5', label:'ذراعين', full:'يوم 5 — الذراعين', weekday:4},
+  {id:'d1', label:'Push 1', full:'يوم 1 — Push', fullEn:'Day 1 — Push', weekday:0},
+  {id:'d2', label:'Pull 1', full:'يوم 2 — Pull', fullEn:'Day 2 — Pull', weekday:1},
+  {id:'d3', label:'رجل 1', labelEn:'Legs 1', full:'يوم 3 — رجل + قطنية', fullEn:'Day 3 — Legs + Lower Back', weekday:2},
+  {id:'d4', label:'Push 2', full:'يوم 4 — Push', fullEn:'Day 4 — Push', weekday:3},
+  {id:'d5', label:'Pull 2', full:'يوم 5 — Pull', fullEn:'Day 5 — Pull', weekday:4},
+  {id:'d6', label:'رجل 2', labelEn:'Legs 2', full:'يوم 6 — رجل + قطنية', fullEn:'Day 6 — Legs + Lower Back', weekday:5},
 ];
 
 const NUTRITION_MEALS = [
@@ -484,17 +526,16 @@ const NUTRITION_MEALS = [
   {time:'سناك بعد التمرين', items:'علبة تونة + رغيف عيش + زبادي', note:'التونة من أرخص مصادر البروتين عالي الجودة.', carbs:30},
   {time:'العشا', items:'فول أو جبن قريش + بيضة + عيش بلدي', note:'', carbs:25},
   {time:'قبل النوم', items:'كوب لبن + معلقة زبدة فول سوداني', note:'سعرات بسيطة إضافية وانت نايم.', carbs:5},
-  {time:'شوفان وفاكهة', items:'نص كوب شوفان بالحليب + فاكهة موسمية (موزة أو تفاحة أو برتقالة)', note:'مصدر كارب وألياف ممتاز، تقدر تاكله بدل الفطار العادي أي يوم للتنويع.', carbs:45},
   {time:'شيك بديل الماس جينر (اختياري)', items:'كوب لبن + 3 معالق شوفان + معلقتين زبدة فول سوداني + موزة + عسل', note:'حوالي 700-800 سعر حراري، أرخص بكتير من علبة الماس جينر الجاهزة.', carbs:70, special:true},
 ];
 const BASE_CARBS = NUTRITION_MEALS.reduce((s,m)=>s+m.carbs,0);
 
 const LUNCH_ROTATION = [
-  {weekday:0, day:'الأحد', tag:'🍗 فراخ', items:'فراخ مشوية بالليمون والثوم + أرز بسمتي + سلطة', note:'اسلق أو اشوي صدر الفراخ متتبل بليمون وثوم وكمون — رخيص وبروتين عالي.', carbs:90},
+  {weekday:0, day:'الأحد', tag:'🍗 فراخ', items:'فراخ مشوية بالليمون والثوم + أرز + سلطة', note:'اسلق أو اشوي صدر الفراخ متتبل بليمون وثوم وكمون — رخيص وبروتين عالي.', carbs:90},
   {weekday:1, day:'الاتنين', tag:'🌱 اقتصادي', items:'عدس أصفر + أرز + خضار', note:'العدس من أرخص مصادر البروتين والألياف في مصر.', carbs:90},
   {weekday:2, day:'الثلاثاء', tag:'🥩 لحمة', items:'لحمة مفرومة بالبصل والفلفل + بطاطس في الفرن', note:'اللحمة المفرومة أرخص من الشرائح وبتديك نفس البروتين تقريبًا.', carbs:70},
   {weekday:3, day:'الأربع', tag:'🌱 اقتصادي', items:'تونة بالمكرونة', note:'وجبة سريعة واقتصادية وعالية البروتين.', carbs:90},
-  {weekday:4, day:'الخميس', tag:'🍗 فراخ', items:'شاورما فراخ بيتي متبّلة + أرز بسمتي + سلطة', note:'قطع فراخ متبّلة بالتوم والليمون والبهارات ومشوية في الفرن أو على طاسة — نفس طعم الشاورما وأرخص وأصح من الجاهزة.', carbs:90},
+  {weekday:4, day:'الخميس', tag:'🍗 فراخ', items:'فراخ بانيه في الفرن + أرز', note:'مبنّية في الفرن مش مقلية عشان توفر زيت وتبقى أخف.', carbs:90},
   {weekday:5, day:'الجمعة', tag:'🌱 اقتصادي', items:'فول بالزيت والطماطم + بيضة + عيش بلدي', note:'', carbs:60},
   {weekday:6, day:'السبت', tag:'🥩 لحمة', items:'كبدة بالبصل والفلفل + عيش بلدي', note:'الكبدة رخيصة وغنية بالحديد ومفيدة جدًا لبناء العضل.', carbs:55},
 ];
@@ -506,36 +547,79 @@ function getTodayTotalCarbs(){
   return BASE_CARBS + getTodayLunch().carbs;
 }
 
+const RECIPES = [
+  {name:'فراخ مشوية بالثوم والليمون', time:'⏱ 15 دقيقة', ingredients:'صدر فراخ، فصين توم مفروم، عصير نص ليمونة، ملعقة زيت، ملح وفلفل وكمون', steps:'تتبل الفراخ بكل المكونات 10 دقايق. اشويها على طاسة ساخنة 5-6 دقايق كل وش لحد ما تستوي تمام.'},
+  {name:'لحمة مفرومة سريعة بالبصل والفلفل', time:'⏱ 15 دقيقة', ingredients:'200 جم لحمة مفرومة، نص بصلة، فلفل ألوان، ملعقة صلصة طماطم، ملح وفلفل', steps:'حمّر البصل والفلفل في ملعقة زيت 3 دقايق. ضيف اللحمة وقلّبها 7-8 دقايق لحد ما تستوي. ضيف الصلصة دقيقتين وارفعها.'},
+  {name:'شاورما فراخ بيتي', time:'⏱ 20 دقيقة', ingredients:'صدر فراخ شرايح، ملعقة زبادي، توم، كمون، بابريكا، عصير ليمون', steps:'تتبل الفراخ بكل المكونات (10 دقايق كفاية لو مستعجل). حمّرها في طاسة نار عالية 8-10 دقايق لحد ما تاخد لون دهبي وتستوي من جوه.'},
+  {name:'ساندوتش فراخ سريع', time:'⏱ 10 دقايق', ingredients:'فراخ متسلقة أو من وجبة فاضلة، عيش بلدي، طماطم وخس، ملعقة زبادي', steps:'فرّم الفراخ وحطها جوه العيش مع الخضار والصوص. حل سريع جدًا وقت الاستعجال بعد التمرين.'},
+  {name:'كبدة بالبصل', time:'⏱ 10 دقايق', ingredients:'200 جم كبدة مقطعة، بصلة شرايح، ملعقة زيت، ملح وفلفل وكمون', steps:'حمّر البصل شوية، ضيف الكبدة وقلّبها على نار عالية 5-6 دقايق بس (متسبهاش أكتر عشان متبقاش قاسية).'},
+  {name:'فراخ بالفرن مع البطاطس (صينية واحدة)', time:'⏱ 30 دقيقة فرن', ingredients:'فخاد أو صدور فراخ، بطاطس مكعبات، توم، بهارات، ملعقة زيت', steps:'رصّ الفراخ والبطاطس في صينية، تبّلهم بالزيت والبهارات. في الفرن حرارة عالية 25-30 دقيقة. مفيش قلي ولا وقوف عليها.'},
+];
+
+const SWEET_RECIPES = [
+  {name:'كيك الكوب بالميكروويف', time:'⏱ 3 دقايق ميكروويف', ingredients:'3 معالق دقيق، معلقة كاكاو، معلقة سكر، بيضة، شوية لبن، نص معلقة بيكنج بودر', steps:'اخلط كل المكونات في كوب لحد ما يتجانس. حطه في الميكروويف على أعلى درجة 2-3 دقايق. اطلعه وهو طري من جوه وهات.'},
+  {name:'أرز باللبن سريع بالميكروويف', time:'⏱ 5 دقايق ميكروويف', ingredients:'نص كوب أرز مسلوق فاضل، كوب لبن، معلقة سكر، رشة فانيليا', steps:'اخلط المكونات في طبق يتحمل ميكروويف. حطه 4-5 دقايق وقلّب في النص. سيبه يبرد شوية قبل ما تاكله.'},
+  {name:'موز بالشوكولاتة بالميكروويف', time:'⏱ دقيقة واحدة', ingredients:'موزة مقطعة، قطعة شوكولاتة أو معلقة كاكاو وسكر', steps:'حط الموز في طبق وفرد الشوكولاتة فوقيه. ميكروويف دقيقة واحدة بس لحد ما الشوكولاتة تسيح.'},
+  {name:'زبادي بالعسل والمكسرات', time:'⏱ دقيقتين (من غير ميكروويف)', ingredients:'علبة زبادي، معلقة عسل، أي مكسرات متوفرة عندك', steps:'اخلطهم في طبق وهات على طول — حل سريع وبروتين كويس بعد أي وجبة أو تمرين.'},
+  {name:'تفاح بالقرفة بالميكروويف', time:'⏱ 3 دقايق ميكروويف', ingredients:'تفاحة مقطعة قطع، رشة قرفة، معلقة عسل', steps:'حط التفاح في طبق، رش القرفة وحط العسل فوقيه. ميكروويف 2-3 دقايق لحد ما التفاح يطري.'},
+];
+
 const EXERCISES = {
   d1: [
-    {id:'d1e1', icon:'barbell', img:'https://commons.wikimedia.org/wiki/Special:FilePath/Olympic_barbell.jpg', video:'https://commons.wikimedia.org/wiki/Special:FilePath/Bench_press_-_exercise_demonstration_video.webm', name:'بنش بار مستوي', equip:'بنش مستوي + بار حديد', how:'استلقي على البنش وامسك البار بمسافة أوسع من الكتف شوية. انزل بيه لحد ما يلمس صدرك بهدوء، بعدين ادفعه لفوق من غير ما تقفل كوعك تمام.', sets:'4 × 8-10'},
-    {id:'d1e2', icon:'dumbbell', img:'https://commons.wikimedia.org/wiki/Special:FilePath/Dumbbell.JPG', video:'https://commons.wikimedia.org/wiki/Special:FilePath/Incline_press_-_exercise_demonstration_video.webm', name:'ضغط دمبل مائل', equip:'بنش مائل + دمبل', how:'اضبط البنش على ميل 30-45 درجة. امسك دمبل في كل ايد وادفعهم لفوق من عند كتافك، وارجعهم ببطء تحت.', sets:'3 × 10-12'},
-    {id:'d1e3', icon:'seatedMachine', img:'https://commons.wikimedia.org/wiki/Special:FilePath/Sandown_outdoor_gym_chest_press.JPG', name:'جهاز ضغط الصدر', equip:'تشيست بريس ماشين', how:'اجلس واضبط المقعد لحد ما المقابض عند مستوى صدرك بالظبط. ادفع للأمام من غير قفل الكوع، وارجع ببطء.', sets:'3 × 12'},
-    {id:'d1e4', icon:'flyMachine', name:'جهاز الفراشة', equip:'بيك ديك / فراشة', how:'اجلس واضبط ضهر الجهاز. امسك المقابض وادّي دراعيك لبعض قدام صدرك، وارجعهم ببطء من غير ما توسع أوي.', sets:'3 × 15'},
+    {id:'pu1', icon:'seatedMachine', yt:'uV0oHFpg7_E', ytV:true, altYt:'ohRa_YRmVCk', altYtV:true, name:'بنش عالي جهاز', nameEn:'High Incline Machine Press', equip:'جهاز إنكلاين بريس', equipEn:'Incline Press Machine', how:'أول أسبوع اختار وزن تقيل شوية من اللي إنت متعود عليه بس تقدر تكمله — لو بتشيل 15 كيلو مثلاً، ابدأ بـ10 وزوّد تدريجي كل أسبوع لحد ما توصل 15.', howEn:'Week 1: pick a weight slightly heavier than what you\'re used to but can still complete — e.g. if you lift 15kg, start at 10kg and add gradually each week until you reach 15.', altNote:'بديل في جيم إيجل: نفس الفكرة بالظبط بس بقبضتين بدل البار.', altNoteEn:'Eagle gym alternative: same idea, just with two handles instead of a bar.', sets:'3 × 7-9'},
+    {id:'pu2', icon:'barbell', name:'بار عادي فلات', nameEn:'Flat Barbell Bench Press', equip:'بار حديد + بنش مستوي', equipEn:'Barbell + Flat Bench', how:'نفس فكرة الأوزان بتاعة التمرين اللي فات — ابدأ بأقل شوية من أقصى وزن تقدر عليه، وزوّد تدريجي أسبوع ورا أسبوع.', howEn:'Same weight logic as the previous exercise — start slightly below your max and increase gradually week by week.', sets:'3 × 7-9'},
+    {id:'pu3', icon:'flyMachine', yt:'OvujRslJTHc', ytV:true, name:'فراشة', nameEn:'Pec Deck Fly', equip:'بيك ديك / فراشة', equipEn:'Pec Deck Machine', sets:'3 × 7-9'},
+    {id:'pu4', icon:'seatedMachine', yt:'6v4nrRVySj0', ytV:true, name:'ضغط أكتاف', nameEn:'Shoulder Press', equip:'شولدر بريس ماشين', equipEn:'Shoulder Press Machine', how:'أول أسبوع اختار أكبر وزن تقدر عليه والعب بيه في التلات مجاميع من غير ما تزوّد. من تاني أسبوع ثبّت أول مجموعتين على نفس الوزن وزوّد حاجة خفيفة في التالتة.', howEn:'Week 1: pick the heaviest weight you can do for all 3 sets without increasing. From week 2, keep the first two sets the same and add a small bump on the third.', sets:'3 × 7-9'},
+    {id:'pu5', icon:'cableTower', yt:'lMJUXEvcMkQ', ytV:true, name:'رفرفة جانبية بالكابل', nameEn:'Cable Lateral Raise', equip:'كابل', equipEn:'Cable', sets:'3 × 7-9'},
+    {id:'pu6', icon:'cableTower', yt:'kJfjVOy7Zx8', ytV:false, name:'تراي — الشكل الأول', nameEn:'Triceps — Version 1', equip:'كابل', equipEn:'Cable', how:'وزن محترم يخليك تحس بالحرقان مش أي وزن.', howEn:'A weight heavy enough that you actually feel the burn.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'pu7', icon:'cableTower', yt:'9Ark9S11uXw', ytV:true, name:'تراي — الشكل الثاني', nameEn:'Triceps — Version 2', equip:'كابل', equipEn:'Cable', how:'لو معرفتش تعمل الحركة دي، فيه بديل محترم في جيم إيجل: جهاز أوفرهيد، أول جهاز على شمالك.', howEn:'If you can\'t do this movement, there\'s a solid alternative at Eagle gym: overhead machine, first one on your left.', sets:'2 مجموعة', setsEn:'2 sets'},
   ],
   d2: [
-    {id:'d2e1', icon:'cableTower', img:'https://commons.wikimedia.org/wiki/Special:FilePath/Lat_pulldown_machine_20180112.jpg', name:'سحب علوي', equip:'لات بولداون', how:'امسك البار بمسافة أوسع من كتافك، واسحبه لتحت لحد ما يوصل لأعلى صدرك، وارجعه لفوق ببطء.', sets:'4 × 10'},
-    {id:'d2e2', icon:'cableTower', video:'https://commons.wikimedia.org/wiki/Special:FilePath/Bent-over_row_-_exercise_demonstration_video.webm', name:'تجديف كابل جالس', equip:'سيتد كيبل رو', how:'اجلس وامسك المقبض. اسحبه لبطنك مع ضم لوحي الكتف لبعض، وارجع ببطء لقدام.', sets:'3 × 12'},
-    {id:'d2e3', icon:'assistedMachine', video:'https://commons.wikimedia.org/wiki/Special:FilePath/Pull-ups_-_exercise_demonstration_video.webm', name:'عقلة بمساعدة', equip:'أسيستد بول أب', how:'اضبط وزن المساعدة حسب قوتك. امسك المقابض واسحب جسمك لفوق لحد ما دقنك يعدي البار، وانزل ببطء.', sets:'3 × 8-10'},
-    {id:'d2e4', icon:'legMachine', name:'تقوية أسفل الظهر', equip:'باك إكستنشن', how:'ثبّت رجليك في الجهاز وانزل جسمك لقدام ببطء، وارجع لفوق من غير ما تفرد ضهرك زيادة عن اللازم.', sets:'3 × 15'},
+    {id:'pl1', icon:'cableTower', yt:'vjjOmf6xlSA', ytV:true, name:'لات بولداون', nameEn:'Lat Pulldown', equip:'جهاز لات بولداون', equipEn:'Lat Pulldown Machine', how:'العب بقبضة متوسطة (Medium grip). ممكن تقلل العدد شوية على حسب هتتقتل امتى.', howEn:'Use a medium grip. You can lower the rep count a bit depending on how tired you get.', sets:'3 × 9-11'},
+    {id:'pl2', icon:'cableTower', yt:'WbmhMpNbPTQ', ytV:true, name:'سحب فردي', nameEn:'Single-Arm Pulldown', equip:'كابل', equipEn:'Cable', sets:'3 × 7-10'},
+    {id:'pl3', icon:'barbell', yt:'paWyD9m6oM0', ytV:true, name:'تي بار رو', nameEn:'T-Bar Row', equip:'تي بار', equipEn:'T-Bar', how:'زوّد الوزن تدريجي بين كل مجموعة والتانية.', howEn:'Increase the weight gradually between each set.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'pl4', icon:'assistedMachine', yt:'TgBLtAimkac', ytV:true, name:'ظهر زرافة', nameEn:'Giraffe Back Machine', equip:'جهاز ظهر (زرافة)', equipEn:'Back Machine ("Giraffe")', how:'مجموعتين بس — جيب آخرك فيهم.', howEn:'Just 2 sets — give it everything you\'ve got.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'pl5', icon:'flyMachine', yt:'Sw-KEbOilIc', ytV:true, name:'رفرفة خلفية', nameEn:'Reverse Fly', equip:'ريفيرس فراي', equipEn:'Rear Delt Machine', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'pl6', icon:'barbell', yt:'9uRbtdo1JkU', ytV:true, name:'باي بار زجزاج', nameEn:'EZ-Bar Curl', equip:'بار EZ', equipEn:'EZ Bar', how:'مجموعتين بس بوزن محترم. أهم حاجة: كوعك ميتحركش خالص وانت بتعمل الحركة.', howEn:'Just 2 sets with a respectable weight. Most important: your elbow must not move at all during the movement.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'pl7', icon:'dumbbell', yt:'VuEclXR7sZY', ytV:true, name:'هامر كيرل', nameEn:'Hammer Curl', equip:'دمبل', equipEn:'Dumbbell', how:'مجموعتين بس، وزن محترم يخليك تحس بالحرقان.', howEn:'Just 2 sets, weight heavy enough to feel the burn.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'pl8', icon:'cableTower', yt:'9JDYvV_IvDE', ytV:true, name:'ترابيز', nameEn:'Shrugs', equip:'جهاز / قبضتين مختلفتين', equipEn:'Machine / two different grips', how:'في القبضة التانية طلّع جسمك لقدام وانت بتعمل الحركة.', howEn:'On the second grip, lean your body forward as you do the movement.', sets:'قبضة أولى: مجموعة واحدة — قبضة تانية: مجموعتين', setsEn:'1st grip: 1 set — 2nd grip: 2 sets'},
   ],
   d3: [
-    {id:'d3e1', icon:'legSled', img:'https://commons.wikimedia.org/wiki/Special:FilePath/Young_man_using_a_leg_press_machine_at_the_gym.jpg', name:'ضغط أرجل', equip:'ليج بريس', how:'حط رجليك على القاعدة بعرض كتافك. ادفع للأمام من غير ما تقفل ركبتك بالكامل، وارجع ببطء.', sets:'4 × 10'},
-    {id:'d3e2', icon:'squatRack', video:'https://commons.wikimedia.org/wiki/Special:FilePath/Squat_-_exercise_demonstration_video.webm', name:'سكوات سميث', equip:'جهاز سميث', how:'حط البار على كتافك وامسكه كويس. انزل لحد ما فخدك يبقى موازي للأرض تقريبًا، وارجع لفوق.', sets:'4 × 8'},
-    {id:'d3e3', icon:'legMachine', name:'مد الأرجل', equip:'ليج إكستنشن', how:'اجلس واضبط الوسادة فوق كاحلك. مد رجلك لفوق من غير ما ترفع مقعدتك عن الكرسي، وارجع ببطء.', sets:'3 × 12'},
-    {id:'d3e4', icon:'legMachine', name:'ثني الأرجل', equip:'ليج كيرل', how:'حسب الجهاز (واقف أو مستلقي)، اثني رجلك لتحت لحد الآخر، وارجعها ببطء.', sets:'3 × 12'},
+    {id:'lg1', icon:'legSled', yt:'EotSw18oR9w', ytV:true, name:'ليج بريس', nameEn:'Leg Press', equip:'جهاز ليج بريس', equipEn:'Leg Press Machine', how:'وزن تقدر تشيله بس متخليهوش يوقع عليك ويموتك.', howEn:'A weight you can handle, but don\'t let it drop and crush you.', sets:'3 × 6-8'},
+    {id:'lg2', icon:'legMachine', yt:'uM86QE59Tgc', ytV:true, name:'ليج إكستنشن — أماميات', nameEn:'Leg Extension — Front', equip:'جهاز ليج إكستنشن', equipEn:'Leg Extension Machine', how:'وزن محترم، مفيش عدد معين — كمّل لحد ما تحس إن رجلك بتولع.', howEn:'A respectable weight, no fixed rep count — keep going until your legs are burning.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'lg3', icon:'legMachine', yt:'lGNeJsdqJwg', ytV:true, name:'ليج إكستنشن — خلفيات', nameEn:'Leg Curl — Hamstrings', equip:'جهاز ليج كيرل', equipEn:'Leg Curl Machine', how:'نفس الكلام، كمّل لحد ما تجيب آخرك.', howEn:'Same idea, push each set to failure.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'lg4', icon:'legMachine', yt:'yGol0z_T-nU', ytV:true, name:'ضمّة', nameEn:'Adduction', equip:'جهاز أدكشن', equipEn:'Adduction Machine', how:'أول أسبوع هتلاقيها خفيفة عليك — اهدى في الوزن عشان هتصحى معيّط تاني يوم، ومن تاني أسبوع اتغاشم براحتك في الزيادة.', howEn:'Week 1 it\'ll feel deceptively light — go easy on the weight since you\'ll wake up sore the next day. From week 2, gradually push the weight up.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'lg5', icon:'legMachine', yt:'eUisO0l6ooY', ytV:true, name:'سمانة', nameEn:'Calf Raise', equip:'جهاز سمانة', equipEn:'Calf Machine', how:'مفيش عدد معين، كمّل لحد ما رجلك تبتدي تنمل. مهم: اطلع بجسمك وانت بتعمل الحركة عشان تجيب مدى الحركة صح، متقلدش شكل الفيديو بالظبط.', howEn:'No fixed rep count, keep going until your calves start to tingle. Important: rise up fully on your toes to get the full range of motion — don\'t copy the video exactly.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'lg6', icon:'legMachine', yt:'VgwvfO_-JiQ', ytV:true, name:'قطنية', nameEn:'Lower Back Extension', equip:'جهاز قطنية', equipEn:'Lower Back Machine', how:'براحة وانت طالع ونازل، جيب آخرك في المجموعتين.', howEn:'Slow and controlled on the way up and down, give it everything on both sets.', sets:'2 × 13'},
+    {id:'lg7', emoji:'🔥', name:'بطن', nameEn:'Abs', equip:'كرنشز أو أي تمرين بطن', equipEn:'Crunches or any ab exercise', how:'كرنشز أو أي تمرين بطن تحبه — آخر حاجة في اليوم.', howEn:'Crunches or any ab exercise you like — the last thing in the day.', sets:'حسب رغبتك', setsEn:'As many as you like'},
   ],
   d4: [
-    {id:'d4e1', icon:'seatedMachine', video:'https://commons.wikimedia.org/wiki/Special:FilePath/Shoulder_press_-_exercise_demonstration_video.webm', name:'ضغط أكتاف', equip:'شولدر بريس ماشين', how:'اجلس واضبط المقعد لحد ما المقابض عند مستوى كتافك. ادفع لفوق من غير قفل الكوع بالكامل، وارجع ببطء.', sets:'4 × 10'},
-    {id:'d4e2', icon:'dumbbell', img:'https://commons.wikimedia.org/wiki/Special:FilePath/Dumbbell.JPG', name:'رفرفة جانبية', equip:'دمبل', how:'وقف وامسك دمبل في كل ايد. ارفعهم لجنب لحد مستوى كتفك، وارجعهم ببطء تحت.', sets:'3 × 12-15'},
-    {id:'d4e3', icon:'cableTower', name:'رفرفة أمامية', equip:'كابل', how:'امسك المقبض وارفع دراعك لقدام لحد مستوى كتفك، وارجع ببطء.', sets:'3 × 12'},
-    {id:'d4e4', icon:'flyMachine', name:'رفرفة خلفية', equip:'رير دلت ماشين', how:'اجلس واضبط الجهاز. ادّي دراعيك للخلف مع ضم لوحي الكتف لبعض، وارجع ببطء.', sets:'3 × 15'},
+    {id:'pb1', icon:'seatedMachine', yt:'uV0oHFpg7_E', ytV:true, altYt:'ohRa_YRmVCk', altYtV:true, name:'بنش عالي جهاز', nameEn:'High Incline Machine Press', equip:'جهاز إنكلاين بريس', equipEn:'Incline Press Machine', how:'أول أسبوع اختار وزن تقيل شوية من اللي إنت متعود عليه بس تقدر تكمله — لو بتشيل 15 كيلو مثلاً، ابدأ بـ10 وزوّد تدريجي كل أسبوع لحد ما توصل 15.', howEn:'Week 1: pick a weight slightly heavier than what you\'re used to but can still complete — e.g. if you lift 15kg, start at 10kg and add gradually each week until you reach 15.', altNote:'بديل في جيم إيجل: نفس الفكرة بالظبط بس بقبضتين بدل البار.', altNoteEn:'Eagle gym alternative: same idea, just with two handles instead of a bar.', sets:'3 × 7-9'},
+    {id:'pb2', icon:'barbell', name:'بار عادي فلات', nameEn:'Flat Barbell Bench Press', equip:'بار حديد + بنش مستوي', equipEn:'Barbell + Flat Bench', how:'نفس فكرة الأوزان بتاعة التمرين اللي فات — ابدأ بأقل شوية من أقصى وزن تقدر عليه، وزوّد تدريجي أسبوع ورا أسبوع.', howEn:'Same weight logic as the previous exercise — start slightly below your max and increase gradually week by week.', sets:'3 × 7-9'},
+    {id:'pb3', icon:'flyMachine', yt:'OvujRslJTHc', ytV:true, name:'فراشة', nameEn:'Pec Deck Fly', equip:'بيك ديك / فراشة', equipEn:'Pec Deck Machine', sets:'3 × 7-9'},
+    {id:'pb4', icon:'seatedMachine', yt:'6v4nrRVySj0', ytV:true, name:'ضغط أكتاف', nameEn:'Shoulder Press', equip:'شولدر بريس ماشين', equipEn:'Shoulder Press Machine', how:'أول أسبوع اختار أكبر وزن تقدر عليه والعب بيه في التلات مجاميع من غير ما تزوّد. من تاني أسبوع ثبّت أول مجموعتين على نفس الوزن وزوّد حاجة خفيفة في التالتة.', howEn:'Week 1: pick the heaviest weight you can do for all 3 sets without increasing. From week 2, keep the first two sets the same and add a small bump on the third.', sets:'3 × 7-9'},
+    {id:'pb5', icon:'cableTower', yt:'lMJUXEvcMkQ', ytV:true, name:'رفرفة جانبية بالكابل', nameEn:'Cable Lateral Raise', equip:'كابل', equipEn:'Cable', sets:'3 × 7-9'},
+    {id:'pb6', icon:'cableTower', yt:'kJfjVOy7Zx8', ytV:false, name:'تراي — الشكل الأول', nameEn:'Triceps — Version 1', equip:'كابل', equipEn:'Cable', how:'وزن محترم يخليك تحس بالحرقان مش أي وزن.', howEn:'A weight heavy enough that you actually feel the burn.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'pb7', icon:'cableTower', yt:'9Ark9S11uXw', ytV:true, name:'تراي — الشكل الثاني', nameEn:'Triceps — Version 2', equip:'كابل', equipEn:'Cable', how:'لو معرفتش تعمل الحركة دي، فيه بديل محترم في جيم إيجل: جهاز أوفرهيد، أول جهاز على شمالك.', howEn:'If you can\'t do this movement, there\'s a solid alternative at Eagle gym: overhead machine, first one on your left.', sets:'2 مجموعة', setsEn:'2 sets'},
   ],
   d5: [
-    {id:'d5e1', icon:'dumbbell', img:'https://commons.wikimedia.org/wiki/Special:FilePath/Dumbbell.JPG', name:'باي بالدمبل', equip:'دمبل', how:'وقف وامسك دمبل في كل ايد. اثني دراعك لفوق من غير ما تحرك كوعك، وارجع ببطء.', sets:'4 × 10-12'},
-    {id:'d5e2', icon:'cableTower', name:'تراي بالكابل', equip:'كابل بار', how:'امسك البار وضهرك مستقيم. ادفعه لتحت لحد ما دراعك يتفرد تمامًا، وارجع ببطء.', sets:'4 × 12'},
-    {id:'d5e3', icon:'preacherBench', name:'باي بريتشر', equip:'بريتشر كيرل ماشين', how:'حط دراعك على الوسادة المائلة. اثني الدراع لفوق، وارجعه ببطء من غير ما ترفع كتفك.', sets:'3 × 10'},
-    {id:'d5e4', icon:'assistedMachine', name:'ديبس بمساعدة', equip:'أسيستد ديب ماشين', how:'اضبط وزن المساعدة حسب قوتك. امسك المقابض وانزل جسمك لتحت، وادفع لفوق تاني.', sets:'3 × 8-10'},
+    {id:'ql1', icon:'cableTower', yt:'vjjOmf6xlSA', ytV:true, name:'لات بولداون', nameEn:'Lat Pulldown', equip:'جهاز لات بولداون', equipEn:'Lat Pulldown Machine', how:'العب بقبضة متوسطة (Medium grip). ممكن تقلل العدد شوية على حسب هتتقتل امتى.', howEn:'Use a medium grip. You can lower the rep count a bit depending on how tired you get.', sets:'3 × 9-11'},
+    {id:'ql2', icon:'cableTower', yt:'WbmhMpNbPTQ', ytV:true, name:'سحب فردي', nameEn:'Single-Arm Pulldown', equip:'كابل', equipEn:'Cable', sets:'3 × 7-10'},
+    {id:'ql3', icon:'barbell', yt:'paWyD9m6oM0', ytV:true, name:'تي بار رو', nameEn:'T-Bar Row', equip:'تي بار', equipEn:'T-Bar', how:'زوّد الوزن تدريجي بين كل مجموعة والتانية.', howEn:'Increase the weight gradually between each set.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'ql4', icon:'assistedMachine', yt:'TgBLtAimkac', ytV:true, name:'ظهر زرافة', nameEn:'Giraffe Back Machine', equip:'جهاز ظهر (زرافة)', equipEn:'Back Machine ("Giraffe")', how:'مجموعتين بس — جيب آخرك فيهم.', howEn:'Just 2 sets — give it everything you\'ve got.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'ql5', icon:'flyMachine', yt:'Sw-KEbOilIc', ytV:true, name:'رفرفة خلفية', nameEn:'Reverse Fly', equip:'ريفيرس فراي', equipEn:'Rear Delt Machine', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'ql6', icon:'barbell', yt:'9uRbtdo1JkU', ytV:true, name:'باي بار زجزاج', nameEn:'EZ-Bar Curl', equip:'بار EZ', equipEn:'EZ Bar', how:'مجموعتين بس بوزن محترم. أهم حاجة: كوعك ميتحركش خالص وانت بتعمل الحركة.', howEn:'Just 2 sets with a respectable weight. Most important: your elbow must not move at all during the movement.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'ql7', icon:'dumbbell', yt:'VuEclXR7sZY', ytV:true, name:'هامر كيرل', nameEn:'Hammer Curl', equip:'دمبل', equipEn:'Dumbbell', how:'مجموعتين بس، وزن محترم يخليك تحس بالحرقان.', howEn:'Just 2 sets, weight heavy enough to feel the burn.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'ql8', icon:'cableTower', yt:'9JDYvV_IvDE', ytV:true, name:'ترابيز', nameEn:'Shrugs', equip:'جهاز / قبضتين مختلفتين', equipEn:'Machine / two different grips', how:'في القبضة التانية طلّع جسمك لقدام وانت بتعمل الحركة.', howEn:'On the second grip, lean your body forward as you do the movement.', sets:'قبضة أولى: مجموعة واحدة — قبضة تانية: مجموعتين', setsEn:'1st grip: 1 set — 2nd grip: 2 sets'},
+  ],
+  d6: [
+    {id:'mg1', icon:'legSled', yt:'EotSw18oR9w', ytV:true, name:'ليج بريس', nameEn:'Leg Press', equip:'جهاز ليج بريس', equipEn:'Leg Press Machine', how:'وزن تقدر تشيله بس متخليهوش يوقع عليك ويموتك.', howEn:'A weight you can handle, but don\'t let it drop and crush you.', sets:'3 × 6-8'},
+    {id:'mg2', icon:'legMachine', yt:'uM86QE59Tgc', ytV:true, name:'ليج إكستنشن — أماميات', nameEn:'Leg Extension — Front', equip:'جهاز ليج إكستنشن', equipEn:'Leg Extension Machine', how:'وزن محترم، مفيش عدد معين — كمّل لحد ما تحس إن رجلك بتولع.', howEn:'A respectable weight, no fixed rep count — keep going until your legs are burning.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'mg3', icon:'legMachine', yt:'lGNeJsdqJwg', ytV:true, name:'ليج إكستنشن — خلفيات', nameEn:'Leg Curl — Hamstrings', equip:'جهاز ليج كيرل', equipEn:'Leg Curl Machine', how:'نفس الكلام، كمّل لحد ما تجيب آخرك.', howEn:'Same idea, push each set to failure.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'mg4', icon:'legMachine', yt:'yGol0z_T-nU', ytV:true, name:'ضمّة', nameEn:'Adduction', equip:'جهاز أدكشن', equipEn:'Adduction Machine', how:'أول أسبوع هتلاقيها خفيفة عليك — اهدى في الوزن عشان هتصحى معيّط تاني يوم، ومن تاني أسبوع اتغاشم براحتك في الزيادة.', howEn:'Week 1 it\'ll feel deceptively light — go easy on the weight since you\'ll wake up sore the next day. From week 2, gradually push the weight up.', sets:'2 مجموعة', setsEn:'2 sets'},
+    {id:'mg5', icon:'legMachine', yt:'eUisO0l6ooY', ytV:true, name:'سمانة', nameEn:'Calf Raise', equip:'جهاز سمانة', equipEn:'Calf Machine', how:'مفيش عدد معين، كمّل لحد ما رجلك تبتدي تنمل. مهم: اطلع بجسمك وانت بتعمل الحركة عشان تجيب مدى الحركة صح، متقلدش شكل الفيديو بالظبط.', howEn:'No fixed rep count, keep going until your calves start to tingle. Important: rise up fully on your toes to get the full range of motion — don\'t copy the video exactly.', sets:'3 مجاميع', setsEn:'3 sets'},
+    {id:'mg6', icon:'legMachine', yt:'VgwvfO_-JiQ', ytV:true, name:'قطنية', nameEn:'Lower Back Extension', equip:'جهاز قطنية', equipEn:'Lower Back Machine', how:'براحة وانت طالع ونازل، جيب آخرك في المجموعتين.', howEn:'Slow and controlled on the way up and down, give it everything on both sets.', sets:'2 × 13'},
+    {id:'mg7', emoji:'🔥', name:'بطن', nameEn:'Abs', equip:'كرنشز أو أي تمرين بطن', equipEn:'Crunches or any ab exercise', how:'كرنشز أو أي تمرين بطن تحبه — آخر حاجة في اليوم.', howEn:'Crunches or any ab exercise you like — the last thing in the day.', sets:'حسب رغبتك', setsEn:'As many as you like'},
   ],
 };
 
@@ -581,15 +665,15 @@ function renderSubTabs(){
 }
 
 const HEADER_SUBS = {
-  home: 'شوف حالتك النهاردة بنظرة واحدة',
-  exercises: 'اختار اليوم وابدأ التمرين',
-  food: 'الأكل + الكرياتين + توزيع الكارب',
-  weight: 'سجّل وزنك كل أسبوع وتابع التقدم',
-  music: 'شغّل موسيقاك من التطبيق اللي إنت عايزه'
+  home: {ar:'شوف حالتك النهاردة بنظرة واحدة', en:'See your day at a glance'},
+  exercises: {ar:'اختار اليوم وابدأ التمرين', en:'Pick a day and start training'},
+  food: {ar:'الأكل + الكرياتين + توزيع الكارب', en:'Food + Creatine + Carb split'},
+  weight: {ar:'سجّل وزنك كل أسبوع وتابع التقدم', en:'Log your weight weekly and track progress'},
+  music: {ar:'شغّل موسيقاك من التطبيق اللي إنت عايزه', en:'Play music from whichever app you like'}
 };
 
 async function renderHome(){
-  document.getElementById('headerSub').textContent = HEADER_SUBS.home;
+  document.getElementById('headerSub').textContent = tr(HEADER_SUBS.home.ar, HEADER_SUBS.home.en);
   const wrap = document.getElementById('mainContent');
   const jsDay = new Date().getDay();
   const todayWorkout = DAYS.find(d=>d.weekday===jsDay);
@@ -634,7 +718,7 @@ async function renderHome(){
 }
 
 async function renderExercises(){
-  document.getElementById('headerSub').textContent = HEADER_SUBS.exercises;
+  document.getElementById('headerSub').textContent = tr(HEADER_SUBS.exercises.ar, HEADER_SUBS.exercises.en);
   const wrap = document.getElementById('mainContent');
   const day = DAYS.find(d=>d.id===currentDay);
   const list = EXERCISES[currentDay];
@@ -644,36 +728,40 @@ async function renderExercises(){
   for(const ex of list){
     const st = await loadState(`ex:${ex.id}`, {done:false, weight:''});
     if(st.done) doneCount++;
+    const exName = tr(ex.name, ex.nameEn);
+    const exEquip = tr(ex.equip, ex.equipEn);
     cardsHtml += `
       <div class="card ${st.done?'done':''}" data-exid="${ex.id}">
         <div class="card-top">
-          <div class="icon-wrap">${ex.img ? `<img src="${ex.img}" alt="${ex.equip}" loading="lazy">` : ICONS[ex.icon]}</div>
+          <div class="icon-wrap">${ex.img ? `<img src="${ex.img}" alt="${exEquip}" loading="lazy">` : (ex.icon ? ICONS[ex.icon] : (ex.emoji || '🏋️'))}</div>
           <div class="name-block">
-            <p class="ex-name">${ex.name}</p>
-            <p class="ex-equip">${ex.equip}</p>
+            <p class="ex-name">${exName}</p>
+            <p class="ex-equip">${exEquip}</p>
           </div>
         </div>
-        <p class="how-to">${ex.how}</p>
-        ${ex.video ? `<video class="ex-video" controls muted playsinline loop preload="none"><source src="${ex.video}" type="video/webm"></video>` : ''}
+        ${ex.how ? `<p class="how-to">${tr(ex.how, ex.howEn)}</p>` : ''}
+        ${ex.yt ? `<div class="${ex.ytV ? 'yt-wrap' : 'yt-wrap-h'}"><iframe src="https://www.youtube-nocookie.com/embed/${ex.yt}?playsinline=1&rel=0&modestbranding=1" title="${exName}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : (ex.video ? `<video class="ex-video" controls muted playsinline loop preload="none"><source src="${ex.video}" type="video/webm"></video>` : '')}
+        ${ex.altNote ? `<p class="alt-label"><b>${tr('بديل:','Alt:')}</b> ${tr(ex.altNote, ex.altNoteEn)}</p>` : ''}
+        ${ex.altYt ? `<div class="${ex.altYtV ? 'yt-wrap' : 'yt-wrap-h'}"><iframe src="https://www.youtube-nocookie.com/embed/${ex.altYt}?playsinline=1&rel=0&modestbranding=1" title="${tr('بديل','Alt')} ${exName}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : ''}
         <div class="card-bottom">
-          <span class="sets-badge">${ex.sets}</span>
+          <span class="sets-badge">${tr(ex.sets, ex.setsEn)}</span>
           <div class="right-controls">
-            <input class="weight-input" type="text" inputmode="decimal" placeholder="الوزن" value="${st.weight||''}">
-            <button class="done-btn ${st.done?'on':''}">${st.done ? 'خلصت ✓' : 'خلصت؟'}</button>
+            <input class="weight-input" type="text" inputmode="decimal" placeholder="${tr('الوزن','Weight')}" value="${st.weight||''}">
+            <button class="done-btn ${st.done?'on':''}">${st.done ? tr('خلصت ✓','Done ✓') : tr('خلصت؟','Done?')}</button>
           </div>
         </div>
       </div>`;
   }
 
   wrap.innerHTML = `
-    <div class="section-title"><b>${day.full}</b></div>
+    <div class="section-title"><b>${tr(day.full, day.fullEn)}</b></div>
     <div class="progress-line">
       <span id="progressText">${doneCount}/${list.length}</span>
       <div class="progress-track"><div class="progress-fill" style="width:${(doneCount/list.length)*100}%"></div></div>
-      <span>خلّصت</span>
+      <span>${tr('خلّصت','Done')}</span>
     </div>
     <div id="cardsWrap">${cardsHtml}</div>
-    <div class="reset-row"><button class="reset-btn" id="resetBtn">تصفير تمارين اليوم ده</button></div>
+    <div class="reset-row"><button class="reset-btn" id="resetBtn">${tr('تصفير تمارين اليوم ده','Reset this day')}</button></div>
   `;
 
   wrap.querySelectorAll('.card').forEach(cardEl=>{
@@ -703,7 +791,7 @@ async function renderExercises(){
 }
 
 async function renderFood(){
-  document.getElementById('headerSub').textContent = HEADER_SUBS.food;
+  document.getElementById('headerSub').textContent = tr(HEADER_SUBS.food.ar, HEADER_SUBS.food.en);
   const wrap = document.getElementById('mainContent');
   const todayKey = `creatine:${new Date().toISOString().slice(0,10)}`;
   const creatineState = await loadState(todayKey, {done:false});
@@ -769,6 +857,34 @@ async function renderFood(){
     ${lunchHtml}
     <div class="section-title"><b>باقي وجبات اليوم</b></div>
     ${mealsHtml}
+    <div class="section-title"><b>وصفات سريعة وفراخ/لحمة اقتصادية</b> — تقدر تستبدل بيها أي وجبة غدا وانت محافظ على نفس الكارب والبروتين</div>
+    ${RECIPES.map(r => `
+      <div class="card">
+        <div class="card-top">
+          <div class="icon-wrap">🍳</div>
+          <div class="name-block">
+            <p class="ex-name">${r.name}</p>
+            <p class="ex-equip">${r.time}</p>
+          </div>
+        </div>
+        <p class="how-to"><b style="color:var(--text);">المكونات:</b> ${r.ingredients}</p>
+        <p class="how-to"><b style="color:var(--text);">الطريقة:</b> ${r.steps}</p>
+      </div>
+    `).join('')}
+    <div class="section-title"><b>حلويات سريعة وميكروويف</b> — لقفشة السكر من غير ما تكسر نظامك</div>
+    ${SWEET_RECIPES.map(r => `
+      <div class="card">
+        <div class="card-top">
+          <div class="icon-wrap">🍮</div>
+          <div class="name-block">
+            <p class="ex-name">${r.name}</p>
+            <p class="ex-equip">${r.time}</p>
+          </div>
+        </div>
+        <p class="how-to"><b style="color:var(--text);">المكونات:</b> ${r.ingredients}</p>
+        <p class="how-to"><b style="color:var(--text);">الطريقة:</b> ${r.steps}</p>
+      </div>
+    `).join('')}
   `;
 
   document.getElementById('creatineBtn').addEventListener('click', async ()=>{
@@ -795,16 +911,16 @@ function buildChartSVG(entries){
   const dots = entries.map((e,i)=>{
     const x = pad + i*xStep;
     const y = h - pad - ((e.weight - min)/(max-min))*(h-pad*2);
-    return `<circle cx="${x}" cy="${y}" r="3.5" fill="#D4FF3E"/>`;
+    return `<circle cx="${x}" cy="${y}" r="3.5" fill="#FFFFFF"/>`;
   }).join('');
   return `<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:auto;">
-    <polyline points="${points}" fill="none" stroke="#D4FF3E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="${points}" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
     ${dots}
   </svg>`;
 }
 
 async function renderWeight(){
-  document.getElementById('headerSub').textContent = HEADER_SUBS.weight;
+  document.getElementById('headerSub').textContent = tr(HEADER_SUBS.weight.ar, HEADER_SUBS.weight.en);
   const wrap = document.getElementById('mainContent');
   const log = await loadState('weightlog', []);
   const today = new Date().toISOString().slice(0,10);
@@ -821,7 +937,7 @@ async function renderWeight(){
         const cls = d>0?'up':(d<0?'down':'same');
         deltaHtml = `<span class="delta ${cls}">${d>0?'+':''}${d} كجم</span>`;
       }
-      logHtml += `<div class="log-row" data-date="${e.date}"><div><div class="log-w">${e.weight} كجم</div><div class="log-date">${e.date}</div></div><div class="log-actions">${deltaHtml}<button class="del-btn" data-del="${e.date}">🗑️</button></div></div>`;
+      logHtml += `<div class="log-row"><div><div class="log-w">${e.weight} كجم</div><div class="log-date">${e.date}</div></div>${deltaHtml}</div>`;
     }
   }
 
@@ -854,29 +970,6 @@ async function renderWeight(){
     await saveState('weightlog', newLog);
     renderWeight();
   });
-
-  wrap.querySelectorAll('.del-btn').forEach(btn=>{
-    btn.addEventListener('click', async ()=>{
-      const dateToDelete = btn.dataset.del;
-      const newLog = log.filter(e=>e.date !== dateToDelete);
-      await saveState('weightlog', newLog);
-      renderWeight();
-    });
-  });
-}
-
-function renderMusic(){
-  document.getElementById('headerSub').textContent = HEADER_SUBS.music;
-  const wrap = document.getElementById('mainContent');
-  wrap.innerHTML = `
-    <div class="section-title"><b>شغّل موسيقاك وانت بتتمرن</b></div>
-    <div class="music-grid">
-      <a class="music-btn" href="https://music.youtube.com" target="_blank" rel="noopener"><span class="micon">▶️</span>يوتيوب ميوزيك</a>
-      <a class="music-btn" href="https://www.youtube.com" target="_blank" rel="noopener"><span class="micon">📺</span>يوتيوب</a>
-      <a class="music-btn" href="https://open.spotify.com" target="_blank" rel="noopener"><span class="micon">🎧</span>سبوتيفاي</a>
-      <a class="music-btn" href="https://play.anghami.com" target="_blank" rel="noopener"><span class="micon">🎶</span>أنغامي</a>
-    </div>
-  `;
 }
 
 function switchSection(section){
@@ -890,10 +983,35 @@ function switchSection(section){
   else if(section==='music') renderMusic();
 }
 
+function renderMusic(){
+  document.getElementById('headerSub').textContent = tr(HEADER_SUBS.music.ar, HEADER_SUBS.music.en);
+  const wrap = document.getElementById('mainContent');
+  wrap.innerHTML = `
+    <div class="section-title"><b>${tr('شغّل موسيقاك وانت بتتمرن','Play your music while you train')}</b></div>
+    <div class="music-grid">
+      <a class="music-btn" href="https://music.youtube.com" target="_blank" rel="noopener"><span class="micon">▶️</span>${tr('يوتيوب ميوزيك','YouTube Music')}</a>
+      <a class="music-btn" href="https://www.youtube.com" target="_blank" rel="noopener"><span class="micon">📺</span>${tr('يوتيوب','YouTube')}</a>
+      <a class="music-btn" href="https://open.spotify.com" target="_blank" rel="noopener"><span class="micon">🎧</span>${tr('سبوتيفاي','Spotify')}</a>
+      <a class="music-btn" href="https://play.anghami.com" target="_blank" rel="noopener"><span class="micon">🎶</span>${tr('أنغامي','Anghami')}</a>
+    </div>
+  `;
+}
+
 document.querySelectorAll('.nav-btn').forEach(btn=>{
   btn.addEventListener('click', ()=> switchSection(btn.dataset.section));
 });
 
+document.getElementById('langBtn').addEventListener('click', ()=>{
+  LANG = LANG === 'ar' ? 'en' : 'ar';
+  localStorage.setItem('lang', LANG);
+  applyLangToDocument();
+  renderNavLabels();
+  renderSubTabs();
+  switchSection(currentSection);
+});
+
+applyLangToDocument();
+renderNavLabels();
 switchSection('home');
 </script>
 
